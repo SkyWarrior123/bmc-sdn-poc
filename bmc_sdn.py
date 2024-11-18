@@ -232,14 +232,14 @@ if __name__ == "__main__":
     
     # MultiChain configuration
     rpcuser = 'multichainrpc'
-    rpcpasswd = '2RPJYthqTCH1S1rz62iLFJb62DEVRiomPy9VKLmeVJVb'
+    rpcpasswd = 'your_rpc_password' # For ex: 2RPJYthqTCH1S1rz62iLFJb62DEVRiomPy9VKLmeVJVb
     rpchost = '127.0.0.1'
     rpcport = '6746'
     chainname = 'chain_sdn1'
     
     # Initialize MultiChain API
     api = Savoir(rpcuser, rpcpasswd, rpchost, rpcport, chainname)
-    myaddress = '1DNTCuJ62djSorwZ5cNE7yku64MZmQJdpsSaTM'
+    myaddress = 'your_address' # For ex: 1DNTCuJ62djSorwZ5cNE7yku64MZmQJdpsSaTM
     
     # ONOS API endpoints
     url = 'http://192.168.1.39:8181/onos/v1/flows'
