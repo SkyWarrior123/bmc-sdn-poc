@@ -1,5 +1,8 @@
 # BMC-SDN: Blockchain-based Multi-controller Architecture for Secure Software-defined Networks
 
+## Note
+- This is an implementaion of the paper BMC-SDN Blockchain-based Multi-controller Architecture for Secure Software-defined Networks which can be accessed https://onlinelibrary.wiley.com/doi/epdf/10.1155/2021/9984666
+
 ## Overview
 BMC-SDN implements a secure multi-controller Software-Defined Network (SDN) architecture using MultiChain blockchain technology. The system provides robust network management capabilities with distributed control and enhanced security through blockchain consensus.
 
@@ -31,9 +34,17 @@ pip install logging
 ## Installation
 
 ### 1. MININET Setup
-Install MININET on your virtual machine:
+Install MININET on your virtual machine or use Docker image of mininet using the command below:
 ```bash
-# Follow standard MININET installation procedures for your distribution
+docker pull iwaseyusuke/mininet
+```
+
+and then run the docker container using the command below
+```bash 
+docker run -it --rm --privileged -e DISPLAY \
+             -v /tmp/.X11-unix:/tmp/.X11-unix \
+             -v /lib/modules:/lib/modules \
+             iwaseyusuke/mininet
 ```
 
 ### 2. ONOS Controller Setup
@@ -125,22 +136,6 @@ device-role of:000000000000000c 192.168.1.39 master
 - Secure RPC communication
 - Multiple controller redundancy
 
-## Troubleshooting
-1. Consensus Issues:
-   - Check controller connectivity
-   - Verify MultiChain daemon status
-   - Review activity logs
-
-2. Flow Rule Synchronization:
-   - Verify ONOS controller status
-   - Check MultiChain stream status
-   - Review flow rule logs
-
-3. Connection Issues:
-   - Verify network connectivity between controllers
-   - Check MultiChain peer connections
-   - Verify ONOS cluster status
-
 ## Best Practices
 1. Regular Monitoring:
    - Monitor consensus status
@@ -157,16 +152,9 @@ device-role of:000000000000000c 192.168.1.39 master
    - Network isolation
    - Access control implementation
 
-## Contributing
-Contributions are welcome! Please follow these steps:
+## How to Contribute to repo
 1. Fork the repository
 2. Create a feature branch
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
-
-## License
-[Your License Here]
-
-## Contact
-[Your Contact Information]
